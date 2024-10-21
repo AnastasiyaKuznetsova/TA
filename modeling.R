@@ -1,7 +1,8 @@
-# Downloaded openjdk (8 version?) msi installer, install; Custom setup: Set or override JAVA_HOME variable
+# Downloaded openjdk (8 version) msi installer, install; Custom setup: Set or override JAVA_HOME variable
 
 # if packages are not installed, we have to install them
 #install.packages("readxl")
+
 #install package for chemoinformatics
 #install.packages("rcdk")
 #install.packages("rcdklibs")
@@ -9,6 +10,7 @@
 
 # import library for excel reading
 library(readxl)
+# import library for chemoinformatics
 library(rcdk)
 library(rcdklibs)
 library(fingerprint)
@@ -47,9 +49,10 @@ dc
 dn <- get.desc.names(dc[4])
 dn
 
-#The CDK package also provides an example data set, called bpdata which contains 277 molecules, 
-#in SMILES format and their associated boiling points (BP) in Kelvin. The data.frame has two columns, 
-#viz., the SMILES and the BP. Molecules names are used as row names
+# The CDK package also provides an example data set, called bpdata which contains 277 molecules, 
+# in SMILES format and their associated boiling points (BP) in Kelvin. The data.frame has two columns, 
+# viz., the SMILES and the BP. Molecules names are used as row names
+# load a dataset from the CDK package
 data(bpdata)
 head(bpdata)
 dim(bpdata)
